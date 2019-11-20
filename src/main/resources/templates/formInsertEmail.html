@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>EmailForm</title>
+</head>
+<body>
+<body>
+<h1>Login Page</h1>
+<p th:if="${invalidCredentials}" class="error">Invalid Username/Password</p>
+<form th:action="@{/sendMail}" th:object="${formEmail}" method="post">
+  <label for="emailAddress">EmailAddress</label>
+  <input type="text" id="username" name="recipientEmail" autofocus="autofocus" />
+  <br />
+  <br />
+  <input type="submit" value="Send" />
+</form>
+
+</body>
+</body>
+</html>
